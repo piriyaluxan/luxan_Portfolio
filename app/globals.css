@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #080a0e;
+  --bg-2: #0d1117;
+  --bg-card: #111620;
+  --bg-card-hover: #161d2b;
+  --border: #1e2a3a;
+  --border-bright: #2a3a52;
+  --accent: #00d4ff;
+  --accent-2: #7c3aed;
+  --accent-glow: rgba(0, 212, 255, 0.12);
+  --text-primary: #e8edf5;
+  --text-secondary: #8896a8;
+  --text-muted: #4a5568;
+  --green: #00ff88;
+  --orange: #ff6b35;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.glow-text { text-shadow: 0 0 40px rgba(0, 212, 255, 0.5); }
+.section-label { font-family: 'Space Mono', monospace; font-size: 0.72rem; color: var(--accent); letter-spacing: 0.2em; text-transform: uppercase; }
+.section-title { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--text-primary); line-height: 1.1; }
+
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; transition: all 0.3s ease; }
+.card:hover { background: var(--bg-card-hover); border-color: var(--border-bright); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+
+.tag { font-family: 'Space Mono', monospace; font-size: 0.68rem; padding: 3px 10px; background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); border-radius: 4px; color: var(--accent); display: inline-block; }
+.tag-purple { background: rgba(124,58,237,0.08); border-color: rgba(124,58,237,0.25); color: #a78bfa; }
+.tag-green { background: rgba(0,255,136,0.08); border-color: rgba(0,255,136,0.2); color: var(--green); }
+
+.gradient-line { height: 1px; background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent); background-size: 200% 100%; animation: shimmer 3s linear infinite; }
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+
+.cursor::after { content: '|'; animation: blink 1s step-end infinite; color: var(--accent); margin-left: 2px; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.nav-link { font-family: 'Space Mono', monospace; font-size: 0.72rem; color: var(--text-secondary); letter-spacing: 0.05em; transition: color 0.2s; text-decoration: none; }
+.nav-link:hover { color: var(--accent); }
+
+.btn-primary { font-family: 'Space Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; padding: 12px 24px; background: var(--accent); color: #080a0e; border: none; border-radius: 6px; cursor: pointer; transition: all 0.2s; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.btn-primary:hover { background: #33dcff; box-shadow: 0 0 25px rgba(0,212,255,0.45); transform: translateY(-1px); }
+
+.btn-outline { font-family: 'Space Mono', monospace; font-size: 0.78rem; letter-spacing: 0.05em; padding: 11px 24px; background: transparent; color: var(--text-primary); border: 1px solid var(--border-bright); border-radius: 6px; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-glow); }
+
+.timeline-dot { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 10px rgba(0,212,255,0.7); flex-shrink: 0; }
+
+@media (max-width: 768px) { .section-title { font-size: 2rem !important; } }
