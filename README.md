@@ -18,6 +18,16 @@ This repository contains the source code for a personal portfolio website built 
 - Project showcase with highlights
 - Contact area for inquiries and networking
 
+## Featured Project
+
+### FitSync — Gym Management Platform
+
+A modern, all-in-one gym management system designed to help fitness businesses streamline operations, manage members, and grow revenue.
+
+**About This Application**
+
+FitSync is a comprehensive SaaS platform built for fitness businesses of all sizes. It provides gym owners and managers with powerful tools to manage every aspect of their fitness business from member management to financial tracking. With an intuitive interface and real-time analytics, FitSync empowers fitness entrepreneurs to focus on what they do best—building thriving fitness communities.
+
 ## How to use
 
 1. Install dependencies: `npm install`

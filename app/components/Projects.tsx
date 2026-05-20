@@ -8,9 +8,21 @@ const projects = [
     tags: ["TensorFlow", "React.js", "Python", "OpenCV", "JavaScript", "CSS3"],
     color: "var(--accent)",
     icon: "🧠",
-    github: "https://github.com/Piriyaluxa/Mood-based-playlist-generator",
-    youtube: "https://youtube.com",
+    github: "https://github.com/piriyaluxan/Mood-based-playlist-generator.git",
+    youtube:
+      "https://www.youtube.com/watch?si=F52ZgYq5pu9qHptZ&v=pb-7ujvN0S0&feature=youtu.be",
     highlight: true,
+  },
+  {
+    title: "FitSync",
+    subtitle: "Gym Management Platform",
+    desc: "A modern, all-in-one gym management system designed to help fitness businesses streamline operations, manage members, and grow revenue. FitSync is a comprehensive SaaS platform built for fitness businesses of all sizes, offering member management, financial tracking, and real-time analytics to support thriving fitness communities.",
+    tags: ["SaaS", "Next.js", "Dashboard", "Analytics", "UI/UX"],
+    color: "#3b82f6",
+    icon: "💪",
+    github: "https://github.com/piriyaluxan/FitSync.git",
+    youtube: "https://fit-sync-three-gamma.vercel.app/",
+    highlight: false,
   },
   {
     title: "Learning Management System",
@@ -19,7 +31,7 @@ const projects = [
     tags: ["Node.js", "Express.js", "React", "MongoDB", "Tailwind CSS"],
     color: "#a78bfa",
     icon: "📚",
-    github: "https://github.com/Piriyaluxa/Learning-Management-System",
+    github: "https://github.com/piriyaluxan/University_LMS.git",
     highlight: false,
   },
   {
@@ -29,7 +41,7 @@ const projects = [
     tags: ["React.js", "Tailwind CSS", "Axios", "JavaScript", "HTML5"],
     color: "var(--green)",
     icon: "🎬",
-    github: "https://github.com/Piriyaluxa/movie-mind",
+    github: "https://github.com/piriyaluxan/MovieMind.git",
     highlight: false,
   },
   {
@@ -39,7 +51,7 @@ const projects = [
     tags: ["React", "Vite", "JavaScript", "CSS", "UI/UX"],
     color: "#f59e0b",
     icon: "🏨",
-    github: "https://github.com/Piriyaluxa/hotel-pos-system",
+    github: "https://github.com/piriyaluxan/Hotel_POS_System.git",
     highlight: false,
   },
   {
@@ -49,7 +61,7 @@ const projects = [
     tags: ["React", "Node.js", "Socket.io", "Express.js", "MongoDB", "Vite"],
     color: "#10b981",
     icon: "💬",
-    github: "https://github.com/Piriyaluxa/chatmate",
+    github: "https://github.com/piriyaluxan/ChatMate.git",
     highlight: false,
   },
 ];
@@ -181,29 +193,31 @@ export default function Projects() {
 
               {/* Links */}
               <div style={{ display: "flex", gap: "1rem" }}>
-                <a
-                  href={proj.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    fontFamily: "'Space Mono', monospace",
-                    fontSize: "0.72rem",
-                    color: "var(--text-secondary)",
-                    textDecoration: "none",
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "6px",
-                    transition: "color 0.2s",
-                  }}
-                  onMouseOver={(e) =>
-                    (e.currentTarget.style.color = proj.color)
-                  }
-                  onMouseOut={(e) =>
-                    (e.currentTarget.style.color = "var(--text-secondary)")
-                  }
-                >
-                  ↗ GitHub
-                </a>
+                {proj.github && (
+                  <a
+                    href={proj.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      fontFamily: "'Space Mono', monospace",
+                      fontSize: "0.72rem",
+                      color: "var(--text-secondary)",
+                      textDecoration: "none",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "6px",
+                      transition: "color 0.2s",
+                    }}
+                    onMouseOver={(e) =>
+                      (e.currentTarget.style.color = proj.color)
+                    }
+                    onMouseOut={(e) =>
+                      (e.currentTarget.style.color = "var(--text-secondary)")
+                    }
+                  >
+                    ↗ GitHub
+                  </a>
+                )}
                 {proj.youtube && (
                   <a
                     href={proj.youtube}
