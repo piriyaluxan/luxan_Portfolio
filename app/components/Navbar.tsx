@@ -6,6 +6,7 @@ const links = ["about", "experience", "projects", "skills", "contact"];
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -50,7 +51,16 @@ export default function Navbar() {
       </div>
 
       {/* Links */}
-      <div style={{ display: "flex", gap: "2rem", alignItems: "center" }}>
+      <button
+        type="button"
+        className="mobile-nav-toggle z-50"
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        onClick={() => setMenuOpen((open) => !open)}
+      >
+        {menuOpen ? "✕" : "☰"}
+      </button>
+
+      <div className="nav-links-desktop">
         {links.map((link) => (
           <a
             key={link}
@@ -79,6 +89,42 @@ export default function Navbar() {
           resume
         </a>
       </div>
+
+      {menuOpen && (
+        <div className="mobile-nav-menu">
+          {links.map((link) => (
+            <a
+              key={link}
+              href={`#${link}`}
+              className="nav-link"
+              style={{ width: "100%" }}
+              onClick={() => {
+                setActive(link);
+                setMenuOpen(false);
+              }}
+            >
+              {link}
+            </a>
+          ))}
+          <a
+            href="mailto:sutheskumarpiriyaluxan025@gmail.com"
+            className="btn-primary"
+            style={{ width: "100%", justifyContent: "center" }}
+            onClick={() => setMenuOpen(false)}
+          >
+            hire me
+          </a>
+          <a
+            href="/resume.pdf"
+            className="btn-outline"
+            download
+            style={{ width: "100%", justifyContent: "center" }}
+            onClick={() => setMenuOpen(false)}
+          >
+            resume
+          </a>
+        </div>
+      )}
     </nav>
   );
 }
