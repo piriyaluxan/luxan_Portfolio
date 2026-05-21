@@ -49,7 +49,7 @@ export default function Contact() {
         <div
           className="card"
           style={{
-            padding: "1.5rem 2rem",
+            padding: "1.5rem 1rem",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
