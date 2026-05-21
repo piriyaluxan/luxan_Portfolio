@@ -46,14 +46,14 @@ export default function Navbar() {
         <span style={{ color: "var(--accent)" }}>PS</span>
         <span style={{ color: "var(--text-muted)", margin: "0 6px" }}>/</span>
         <span style={{ color: "var(--text-secondary)", fontSize: "0.72rem" }}>
-          frontend.eng
+          software.eng
         </span>
       </div>
 
       {/* Links */}
       <button
         type="button"
-        className="mobile-nav-toggle z-50"
+        className="mobile-nav-toggle"
         aria-label={menuOpen ? "Close menu" : "Open menu"}
         onClick={() => setMenuOpen((open) => !open)}
       >
