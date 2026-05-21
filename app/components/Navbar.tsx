@@ -17,7 +17,9 @@ export default function Navbar() {
     <nav
       style={{
         position: "fixed",
-        top: 0, left: 0, right: 0,
+        top: 0,
+        left: 0,
+        right: 0,
         zIndex: 100,
         padding: "0 2rem",
         height: "64px",
@@ -26,15 +28,25 @@ export default function Navbar() {
         justifyContent: "space-between",
         background: scrolled ? "rgba(8,10,14,0.92)" : "transparent",
         backdropFilter: scrolled ? "blur(16px)" : "none",
-        borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
+        borderBottom: scrolled
+          ? "1px solid var(--border)"
+          : "1px solid transparent",
         transition: "all 0.4s ease",
       }}
     >
       {/* Logo */}
-      <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.9rem", fontWeight: 700 }}>
+      <div
+        style={{
+          fontFamily: "'Space Mono', monospace",
+          fontSize: "0.9rem",
+          fontWeight: 700,
+        }}
+      >
         <span style={{ color: "var(--accent)" }}>PS</span>
         <span style={{ color: "var(--text-muted)", margin: "0 6px" }}>/</span>
-        <span style={{ color: "var(--text-secondary)", fontSize: "0.72rem" }}>frontend.eng</span>
+        <span style={{ color: "var(--text-secondary)", fontSize: "0.72rem" }}>
+          frontend.eng
+        </span>
       </div>
 
       {/* Links */}
@@ -56,6 +68,15 @@ export default function Navbar() {
           style={{ padding: "8px 16px", fontSize: "0.72rem" }}
         >
           hire me
+        </a>
+        <a
+          href="/resume.pdf"
+          className="btn-outline"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ padding: "8px 16px", fontSize: "0.72rem" }}
+        >
+          resume
         </a>
       </div>
     </nav>

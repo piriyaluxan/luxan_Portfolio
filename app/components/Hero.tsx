@@ -137,6 +137,9 @@ export default function Hero() {
         <a href="#contact" className="btn-outline">
           Get in touch
         </a>
+        <a href="/resume.pdf" className="btn-outline" download>
+          Download Resume
+        </a>
       </div>
 
       {/* Stats row */}
