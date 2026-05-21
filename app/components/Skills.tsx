@@ -39,7 +39,13 @@ const skillGroups = [
   },
 ];
 
-const softSkills = ["Problem Solving", "Time Management", "Team Collaboration", "Critical Thinking", "Effective Communication"];
+const softSkills = [
+  "Problem Solving",
+  "Time Management",
+  "Team Collaboration",
+  "Critical Thinking",
+  "Effective Communication",
+];
 
 export default function Skills() {
   return (
@@ -47,12 +53,24 @@ export default function Skills() {
       id="skills"
       style={{ maxWidth: "1100px", margin: "0 auto", padding: "6rem 2rem" }}
     >
-      <p className="section-label" style={{ marginBottom: "12px" }}>// tech arsenal</p>
-      <h2 className="section-title" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", marginBottom: "3rem" }}>
+      <p className="section-label" style={{ marginBottom: "12px" }}>
+        // tech arsenal
+      </p>
+      <h2
+        className="section-title"
+        style={{ fontSize: "clamp(2rem, 4vw, 3rem)", marginBottom: "3rem" }}
+      >
         Skills
       </h2>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "1.5rem",
+          marginBottom: "2.5rem",
+        }}
+      >
         {skillGroups.map((group) => (
           <div key={group.label} className="card" style={{ padding: "1.8rem" }}>
             <div
@@ -68,20 +86,56 @@ export default function Skills() {
                 gap: "8px",
               }}
             >
-              <div style={{ width: "6px", height: "6px", background: group.color, borderRadius: "50%", boxShadow: `0 0 8px ${group.color}` }} />
+              <div
+                style={{
+                  width: "6px",
+                  height: "6px",
+                  background: group.color,
+                  borderRadius: "50%",
+                  boxShadow: `0 0 8px ${group.color}`,
+                }}
+              />
               {group.label}
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+            >
               {group.skills.map((skill) => (
                 <div key={skill.name}>
-                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "6px" }}>
-                    <span style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>{skill.name}</span>
-                    <span style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.68rem", color: "var(--text-muted)" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      marginBottom: "6px",
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontSize: "0.85rem",
+                        color: "var(--text-secondary)",
+                      }}
+                    >
+                      {skill.name}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: "'Space Mono', monospace",
+                        fontSize: "0.68rem",
+                        color: "var(--text-muted)",
+                      }}
+                    >
                       {skill.level}%
                     </span>
                   </div>
-                  <div style={{ height: "3px", background: "var(--border)", borderRadius: "2px", overflow: "hidden" }}>
+                  <div
+                    style={{
+                      height: "3px",
+                      background: "var(--border)",
+                      borderRadius: "2px",
+                      overflow: "hidden",
+                    }}
+                  >
                     <div
                       style={{
                         height: "100%",
@@ -101,7 +155,16 @@ export default function Skills() {
 
       {/* Soft skills */}
       <div className="card" style={{ padding: "1.8rem" }}>
-        <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.72rem", color: "var(--orange)", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "1.2rem" }}>
+        <div
+          style={{
+            fontFamily: "'Space Mono', monospace",
+            fontSize: "0.72rem",
+            color: "var(--orange)",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase",
+            marginBottom: "1.2rem",
+          }}
+        >
           Soft Skills
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
@@ -126,8 +189,16 @@ export default function Skills() {
 
       {/* Education */}
       <div style={{ marginTop: "2.5rem" }}>
-        <p className="section-label" style={{ marginBottom: "1.5rem" }}>// education</p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.2rem" }}>
+        <p className="section-label" style={{ marginBottom: "1.5rem" }}>
+          // education
+        </p>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "1.2rem",
+          }}
+        >
           {[
             {
               degree: "BICT (Hons) — Software Systems",
@@ -144,12 +215,49 @@ export default function Skills() {
               color: "#a78bfa",
             },
           ].map((edu) => (
-            <div key={edu.degree} className="card" style={{ padding: "1.5rem", borderLeft: `3px solid ${edu.color}` }}>
-              <h4 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: "0.95rem", marginBottom: "4px" }}>{edu.degree}</h4>
-              <div style={{ color: edu.color, fontFamily: "'Space Mono', monospace", fontSize: "0.72rem", marginBottom: "8px" }}>{edu.school}</div>
+            <div
+              key={edu.degree}
+              className="card"
+              style={{
+                padding: "1.5rem",
+                borderLeft: `3px solid ${edu.color}`,
+              }}
+            >
+              <h4
+                style={{
+                  fontFamily: "'Syne', sans-serif",
+                  fontWeight: 700,
+                  fontSize: "0.95rem",
+                  marginBottom: "4px",
+                }}
+              >
+                {edu.degree}
+              </h4>
+              <div
+                style={{
+                  color: edu.color,
+                  fontFamily: "'Space Mono', monospace",
+                  fontSize: "0.72rem",
+                  marginBottom: "8px",
+                }}
+              >
+                {edu.school}
+              </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <span style={{ color: "var(--text-muted)", fontSize: "0.78rem" }}>{edu.period}</span>
-                <span style={{ color: edu.color, fontFamily: "'Space Mono', monospace", fontSize: "0.72rem" }}>{edu.detail}</span>
+                <span
+                  style={{ color: "var(--text-muted)", fontSize: "0.78rem" }}
+                >
+                  {edu.period}
+                </span>
+                <span
+                  style={{
+                    color: edu.color,
+                    fontFamily: "'Space Mono', monospace",
+                    fontSize: "0.72rem",
+                  }}
+                >
+                  {edu.detail}
+                </span>
               </div>
             </div>
           ))}

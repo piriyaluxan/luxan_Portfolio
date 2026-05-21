@@ -14,7 +14,14 @@ const experiences = [
       "Participated in daily stand-ups, code reviews, and iteration cycles.",
       "Debugged, optimized performance, and collaborated via GitLab workflows.",
     ],
-    tags: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "GitLab"],
+    tags: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
+      "GitLab",
+    ],
   },
   {
     role: "Data Management Associate",
@@ -37,8 +44,13 @@ export default function Experience() {
       id="experience"
       style={{ maxWidth: "1100px", margin: "0 auto", padding: "6rem 2rem" }}
     >
-      <p className="section-label" style={{ marginBottom: "12px" }}>// work history</p>
-      <h2 className="section-title" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", marginBottom: "3rem" }}>
+      <p className="section-label" style={{ marginBottom: "12px" }}>
+        // work history
+      </p>
+      <h2
+        className="section-title"
+        style={{ fontSize: "clamp(2rem, 4vw, 3rem)", marginBottom: "3rem" }}
+      >
         Experience
       </h2>
 
@@ -47,9 +59,12 @@ export default function Experience() {
         <div
           style={{
             position: "absolute",
-            left: 0, top: "8px", bottom: 0,
+            left: 0,
+            top: "8px",
+            bottom: 0,
             width: "1px",
-            background: "linear-gradient(to bottom, var(--accent), var(--accent-2), transparent)",
+            background:
+              "linear-gradient(to bottom, var(--accent), var(--accent-2), transparent)",
           }}
         />
 
@@ -70,32 +85,94 @@ export default function Experience() {
 
               <div className="card" style={{ padding: "1.8rem" }}>
                 {/* Header */}
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "0.5rem", marginBottom: "0.75rem" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    flexWrap: "wrap",
+                    gap: "0.5rem",
+                    marginBottom: "0.75rem",
+                  }}
+                >
                   <div>
-                    <h3 style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: "1.1rem", color: "var(--text-primary)" }}>
+                    <h3
+                      style={{
+                        fontFamily: "'Syne', sans-serif",
+                        fontWeight: 700,
+                        fontSize: "1.1rem",
+                        color: "var(--text-primary)",
+                      }}
+                    >
                       {exp.role}
                     </h3>
-                    <div style={{ color: exp.color, fontFamily: "'Space Mono', monospace", fontSize: "0.78rem", marginTop: "2px" }}>
+                    <div
+                      style={{
+                        color: exp.color,
+                        fontFamily: "'Space Mono', monospace",
+                        fontSize: "0.78rem",
+                        marginTop: "2px",
+                      }}
+                    >
                       {exp.company}
                     </div>
                   </div>
                   <div style={{ textAlign: "right" }}>
-                    <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.72rem", color: "var(--text-muted)" }}>
+                    <div
+                      style={{
+                        fontFamily: "'Space Mono', monospace",
+                        fontSize: "0.72rem",
+                        color: "var(--text-muted)",
+                      }}
+                    >
                       {exp.period}
                     </div>
-                    <div style={{ fontSize: "0.72rem", color: "var(--text-muted)", marginTop: "2px" }}>
+                    <div
+                      style={{
+                        fontSize: "0.72rem",
+                        color: "var(--text-muted)",
+                        marginTop: "2px",
+                      }}
+                    >
                       {exp.type}
                     </div>
                   </div>
                 </div>
 
-                <div className="gradient-line" style={{ marginBottom: "1rem" }} />
+                <div
+                  className="gradient-line"
+                  style={{ marginBottom: "1rem" }}
+                />
 
                 {/* Points */}
-                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.6rem", marginBottom: "1.2rem" }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.6rem",
+                    marginBottom: "1.2rem",
+                  }}
+                >
                   {exp.points.map((p, j) => (
-                    <li key={j} style={{ display: "flex", gap: "10px", color: "var(--text-secondary)", fontSize: "0.9rem" }}>
-                      <span style={{ color: exp.color, flexShrink: 0, marginTop: "2px" }}>▸</span>
+                    <li
+                      key={j}
+                      style={{
+                        display: "flex",
+                        gap: "10px",
+                        color: "var(--text-secondary)",
+                        fontSize: "0.9rem",
+                      }}
+                    >
+                      <span
+                        style={{
+                          color: exp.color,
+                          flexShrink: 0,
+                          marginTop: "2px",
+                        }}
+                      >
+                        ▸
+                      </span>
                       {p}
                     </li>
                   ))}
@@ -104,7 +181,12 @@ export default function Experience() {
                 {/* Tags */}
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
                   {exp.tags.map((tag) => (
-                    <span key={tag} className={i === 0 ? "tag" : "tag tag-purple"}>{tag}</span>
+                    <span
+                      key={tag}
+                      className={i === 0 ? "tag" : "tag tag-purple"}
+                    >
+                      {tag}
+                    </span>
                   ))}
                 </div>
               </div>
